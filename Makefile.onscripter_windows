@@ -94,7 +94,7 @@ simple_aviplay$(EXESUFFIX): simple_aviplay$(OBJSUFFIX) AVIWrapper$(OBJSUFFIX)
 	$(LD) $(LDOUT)$@ simple_aviplay$(OBJSUFFIX) AVIWrapper$(OBJSUFFIX) $(LIBS)
 
 onscripter$(EXESUFFIX): $(ONSCRIPTER_OBJS)
-	$(LD) $< $(ONSCRIPTER_OBJS) $(LIBS) $(EXT_FLAGS) /OUT:onscripter$(EXESUFFIX)
+	$(LD) $< $(ONSCRIPTER_OBJS) $(LIBS) $(EXT_FLAGS) /OUT:ONScripter-Jh$(EXESUFFIX)
 
 clean:
 	-$(RM) $(TARGET)
@@ -102,7 +102,7 @@ clean:
 	-$(RM) builtin_dll\*$(OBJSUFFIX)
 
 .cpp$(OBJSUFFIX):
-	$(CC) $(CFLAGS) /Fo $@ $<
+	$(CC) $(CFLAGS) /Fo$@ $<
 
 SarReader$(OBJSUFFIX):    BaseReader.h SarReader.h 
 NsaReader$(OBJSUFFIX):    BaseReader.h SarReader.h NsaReader.h 
